@@ -55,7 +55,7 @@ router.get('/', (req, res) =>{
 // Show
 
 router.get('/:id', (req, res) =>{
-    res.send('Show the single post with ID' + req.params.id)
+    res.send('Show the single post with ID ' + req.params.id)
 })
 
 //Store
@@ -67,18 +67,20 @@ router.post('/', (req, res) => {
 // Update
 
 router.put('/:id', (req, res) => {
-    res.send('Update the entire post with ID' + req.params.id)
+    res.send('Update the entire post with ID ' + req.params.id)
 })
 
 //Modify
 
 router.patch('/:id', (req, res) => {
-    res.send('Partial update for a single post with ID' + req.params.id)
+    res.send('Partial update for a single post with ID ' + req.params.id)
 })
 
 //Destroy
 
 router.delete('/:id', (req, res) =>{
-    res.send('Delete the single post with ID' + req.params.id)
+    res.send('Delete the single post with ID ' + req.params.id)
 })
-module.exports = router
+
+
+module.exports = router;

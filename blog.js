@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const postsRouter = require('./routes/posts')
+const postsRouter = require('./routes/posts.js')
 
 app.use(express.static('public'))
 
@@ -9,7 +9,7 @@ app.use(express.static('public'))
 
 //Routing
 
-app.use('/posts', postsRouter)
+app.use('/api/posts', postsRouter)
 
 
 
