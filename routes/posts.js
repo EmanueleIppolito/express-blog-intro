@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const post =[
+let post =[
     {
         id: 1,
         titolo: "Ciambellone",
@@ -79,6 +79,8 @@ router.patch('/:id', (req, res) => {
 //Destroy
 
 router.delete('/:id', (req, res) =>{
+    const id = parseInt(req.params.id)
+    post = post.filter(articoli => articoli.id !== id)
     res.send('Delete the single post with ID ' + req.params.id)
 })
 
